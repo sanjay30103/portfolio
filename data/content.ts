@@ -70,9 +70,9 @@ export const about = {
     "[Add one personal line here — e.g. where you’re based, what you enjoy, or what you’re learning right now.]",
   ],
   stats: [
-    { value: "[X]+", label: "Years of experience" },
-    { value: "[X]+", label: "Websites delivered" },
-    { value: "[X]+", label: "Happy clients" },
+    { value: "4+", label: "Years of experience" },
+    { value: "130+", label: "Websites delivered" },
+    { value: "20+", label: "Happy clients" },
   ],
 };
 
