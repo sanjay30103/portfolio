@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 #
-# Build the site locally and push ONLY the static files (the /out folder)
-# to the `main` branch on GitHub. Hostinger pulls `main` into public_html.
+# Build the site locally and push ONLY static files to GitHub:
+#
+#   main      → built for the domain root   (Hostinger pulls this)
+#   gh-pages  → built for /portfolio        (GitHub Pages serves this)
 #
 # Your Next.js source code lives on the `source` branch.
 #
@@ -11,7 +13,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-DEPLOY_BRANCH="main"
+PAGES_BASE_PATH="/portfolio"   # = /<repo-name> for username.github.io/<repo-name>
 REPO_URL="$(git remote get-url origin)"
 MESSAGE="${1:-Deploy static site ($(date '+%Y-%m-%d %H:%M'))}"
 
@@ -24,29 +26,42 @@ gitx() {
   fi
 }
 
-echo "→ Building static site..."
-rm -rf out
-npm run build
+# build_and_push <branch> <base-path>
+build_and_push() {
+  local branch="$1" base="$2"
+  echo ""
+  echo "→ Building for '$branch' (base path: '${base:-/}')..."
+  rm -rf out
+  NEXT_PUBLIC_BASE_PATH="$base" npm run build >/dev/null
 
-TMP="$(mktemp -d)"
-trap 'rm -rf "$TMP"' EXIT
+  local tmp
+  tmp="$(mktemp -d)"
+  if gitx ls-remote --exit-code --heads "$REPO_URL" "$branch" >/dev/null 2>&1; then
+    gitx clone --quiet --depth 1 --branch "$branch" "$REPO_URL" "$tmp"
+  else
+    git -C "$tmp" init --quiet -b "$branch"
+    git -C "$tmp" remote add origin "$REPO_URL"
+  fi
 
-if gitx ls-remote --exit-code --heads "$REPO_URL" "$DEPLOY_BRANCH" >/dev/null 2>&1; then
-  gitx clone --quiet --depth 1 --branch "$DEPLOY_BRANCH" "$REPO_URL" "$TMP"
-else
-  git -C "$TMP" init --quiet -b "$DEPLOY_BRANCH"
-  git -C "$TMP" remote add origin "$REPO_URL"
-fi
+  # Replace everything in the branch with the fresh build.
+  rsync -a --delete --exclude ".git" out/ "$tmp"/
 
-# Replace everything in the deploy branch with the fresh build.
-rsync -a --delete --exclude ".git" out/ "$TMP"/
+  (
+    cd "$tmp"
+    git add -A
+    if git diff --cached --quiet; then
+      echo "✓ '$branch': nothing changed."
+    else
+      git commit --quiet -m "$MESSAGE"
+      gitx push --quiet origin "$branch"
+      echo "✓ '$branch': pushed."
+    fi
+  )
+  rm -rf "$tmp"
+}
 
-cd "$TMP"
-git add -A
-if git diff --cached --quiet; then
-  echo "✓ Nothing changed since the last deploy."
-  exit 0
-fi
-git commit --quiet -m "$MESSAGE"
-gitx push --quiet origin "$DEPLOY_BRANCH"
-echo "✓ Static site pushed to '$DEPLOY_BRANCH'. Hostinger will pick it up on the next pull/auto-deploy."
+build_and_push "gh-pages" "$PAGES_BASE_PATH"
+build_and_push "main" ""   # built last, so /out stays the Hostinger version
+
+echo ""
+echo "Done. Hostinger pulls 'main'; GitHub Pages serves 'gh-pages'."

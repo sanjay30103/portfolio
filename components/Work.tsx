@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { work } from "@/data/content";
+import { withBase } from "@/lib/withBase";
 import { ArrowUpRightIcon } from "./Icons";
 import SectionHeading from "./SectionHeading";
 
@@ -17,7 +18,7 @@ export default function Work() {
               <article className="group grid overflow-hidden rounded-3xl border border-line bg-surface transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-line-strong lg:grid-cols-[1.1fr_1fr]">
                 <div className="relative aspect-[16/10] overflow-hidden border-b border-line bg-surface-2 lg:aspect-auto lg:min-h-[340px] lg:border-r lg:border-b-0">
                   <Image
-                    src={p.image}
+                    src={withBase(p.image)}
                     alt={p.imageAlt}
                     fill
                     sizes="(min-width: 1024px) 600px, 100vw"

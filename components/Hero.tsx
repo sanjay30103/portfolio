@@ -1,4 +1,5 @@
 import { hero, links } from "@/data/content";
+import { withBase } from "@/lib/withBase";
 import { ArrowUpRightIcon, DownloadIcon } from "./Icons";
 import VideoPlayer from "./VideoPlayer";
 
@@ -20,7 +21,7 @@ export default function Hero() {
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
-              href={links.resume}
+              href={withBase(links.resume)}
               download
               className="inline-flex items-center justify-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-accent"
             >

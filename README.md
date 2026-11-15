@@ -7,7 +7,8 @@ One-page portfolio built with Next.js (App Router) + Tailwind CSS, exported as a
 | Branch   | What's in it                                   |
 | -------- | ---------------------------------------------- |
 | `source` | This Next.js source code                       |
-| `main`   | Only the built static files (what Hostinger serves) |
+| `main`   | Static build for the domain root (Hostinger)   |
+| `gh-pages` | Static build for `/portfolio` (GitHub Pages) |
 
 ## Edit content
 
@@ -30,7 +31,7 @@ npm run dev
 npm run deploy
 ```
 
-This builds the site into `/out` and pushes only those static files to the `main` branch. Hostinger's Git deployment pulls `main` into `public_html`.
+This builds the site twice and pushes only static files: `main` (for Hostinger, pulled into `public_html`) and `gh-pages` (for https://sanjay30103.github.io/portfolio/).
 
 After changing code, also save the source:
 

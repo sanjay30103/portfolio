@@ -1,4 +1,5 @@
 import { video } from "@/data/content";
+import { withBase } from "@/lib/withBase";
 import YouTubeFacade from "./YouTubeFacade";
 
 /** Framed 16:9 intro video. Uses YouTube if `video.youtubeId` is set, otherwise the local file. */
@@ -26,12 +27,12 @@ export default function VideoPlayer() {
             controls
             playsInline
             preload="none"
-            poster={video.poster}
+            poster={withBase(video.poster)}
             aria-label={video.label}
           >
-            <source src={video.src} type="video/mp4" />
+            <source src={withBase(video.src)} type="video/mp4" />
             {video.captions && (
-              <track kind="captions" src={video.captions} srcLang="en" label="English" default />
+              <track kind="captions" src={withBase(video.captions)} srcLang="en" label="English" default />
             )}
             Your browser does not support the video tag.
           </video>
