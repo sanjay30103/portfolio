@@ -18,6 +18,12 @@ export default function Footer() {
           <p className="mt-1 text-sm text-muted">
             © {year} · {footer.tagline}
           </p>
+          <a
+            href={`mailto:${links.email}`}
+            className="mt-3 inline-block font-mono text-sm break-all text-fg underline-offset-4 transition-colors hover:text-accent hover:underline"
+          >
+            {links.email}
+          </a>
         </div>
         <ul className="flex gap-2">
           {socials.map(({ label, href, Icon, external }) => (

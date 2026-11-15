@@ -26,7 +26,7 @@ export const site = {
 /* Social / contact links                                              */
 /* ------------------------------------------------------------------ */
 export const links = {
-  email: "[your-email@example.com]",
+  email: "surendrasinghdev383@gmail.com",
   linkedin: "https://www.linkedin.com/in/[your-handle]",
   github: "https://github.com/[your-handle]",
   calendly: "https://calendly.com/[your-handle]",
