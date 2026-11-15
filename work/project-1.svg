@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2410"/><stop offset="1" stop-color="#0f0f11"/></linearGradient>
+    <pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" fill-opacity="0.06"/></pattern>
+  </defs>
+  <rect width="1200" height="750" fill="url(#g)"/>
+  <rect width="1200" height="750" fill="url(#d)"/>
+  <g transform="translate(150 120)">
+    <rect width="900" height="510" rx="22" fill="#141417" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
+    <circle cx="34" cy="32" r="7" fill="#ffffff" fill-opacity="0.15"/><circle cx="58" cy="32" r="7" fill="#ffffff" fill-opacity="0.15"/><circle cx="82" cy="32" r="7" fill="#c8f169" fill-opacity="0.7"/>
+    <rect x="0" y="62" width="900" height="2" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="60" y="120" width="420" height="34" rx="8" fill="#ffffff" fill-opacity="0.16"/>
+    <rect x="60" y="170" width="320" height="34" rx="8" fill="#ffffff" fill-opacity="0.1"/>
+    <rect x="60" y="232" width="380" height="14" rx="7" fill="#ffffff" fill-opacity="0.07"/>
+    <rect x="60" y="258" width="300" height="14" rx="7" fill="#ffffff" fill-opacity="0.07"/>
+    <rect x="60" y="310" width="150" height="44" rx="22" fill="#ededef" fill-opacity="0.85"/>
+    <rect x="560" y="110" width="280" height="250" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+    <text x="450" y="460" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="22" fill="#a1a1aa">[Project 1 screenshot]</text>
+  </g>
+</svg>
