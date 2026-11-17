@@ -80,25 +80,27 @@ export const about = {
 /* Intro video (shown on the right side of the Hero)                   */
 /* Use a horizontal (16:9) video.                                      */
 /*                                                                     */
-/* Option A (default): your own video file                             */
-/*   1. Put your video at /public/video/intro.mp4                      */
-/*   2. (Optional) Put a cover image at /public/video/poster.jpg and   */
-/*      change `poster` below. Keep it small (100-200 KB) - it shows   */
-/*      on the first screen, so a heavy image slows the page down.     */
-/*   3. (Optional) Add subtitles at /public/video/intro.vtt and set    */
-/*      `captions: "/video/intro.vtt"`                                 */
+/* Option A (current): Cloudinary                                      */
+/*   Upload the video to Cloudinary and paste its .mp4 link in `src`.  */
+/*   Compression and the cover image are made automatically from the   */
+/*   link - leave `poster` empty. When you shoot a new video, just     */
+/*   replace `src` (and `duration`).                                   */
 /*                                                                     */
-/* Option B: YouTube                                                   */
-/*   Set `youtubeId` (the part after "v=" in the YouTube link).        */
-/*   When it is set, YouTube is used instead of the file.              */
+/* Option B: a file in /public/video, e.g. src: "/video/intro.mp4"     */
+/*   and poster: "/video/poster.jpg" (keep the poster under 200 KB).   */
+/*                                                                     */
+/* Option C: YouTube - set `youtubeId` (part after "v=" in the link).  */
+/*   YouTube shows its own controls and logo, so it's off for now.     */
+/*                                                                     */
+/* Subtitles (optional): captions: "/video/intro.vtt"                  */
 /* ------------------------------------------------------------------ */
 export const video = {
   caption: "Meet me in a minute",
   speedNote: "Lighthouse 95+ on every build",
-  src: "/video/intro.mp4",
-  poster: "/video/poster.svg",
-  captions: "", // e.g. "/video/intro.vtt"
-  youtubeId: "kp8aojxzvW8", // https://www.youtube.com/watch?v=kp8aojxzvW8
+  src: "https://res.cloudinary.com/bqylneie/video/upload/v1794928476/Surendra_portfolio.mp4",
+  poster: "", // empty = auto cover image from the Cloudinary video
+  captions: "",
+  youtubeId: "", // old YouTube video: "kp8aojxzvW8"
   label: "Intro video - Surendra Singh",
   duration: "1:10",
 };

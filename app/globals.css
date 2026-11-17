@@ -50,6 +50,36 @@ body::before {
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 100%);
 }
 
+/* Video window dots: a green light that steps 1 → 2 → 3 and repeats.
+   Only opacity/transform animate, so it stays cheap for the browser. */
+.dot-light {
+  opacity: 0;
+  animation: dot-step 1.8s ease-in-out infinite;
+  box-shadow: 0 0 8px 1px rgb(200 241 105 / 0.6);
+}
+
+@keyframes dot-step {
+  0%,
+  30% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  40%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot-light {
+    animation: none;
+  }
+  span:first-child > .dot-light {
+    opacity: 1;
+  }
+}
+
 /* Keep section headings visible below the sticky navbar */
 section[id] {
   scroll-margin-top: 5rem;
