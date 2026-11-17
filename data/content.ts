@@ -1,6 +1,6 @@
 /**
  * ALL website text lives in this file.
- * Edit anything here — you never need to touch the components.
+ * Edit anything here - you never need to touch the components.
  *
  * Anything in [square brackets] is a placeholder: replace it with your real info.
  */
@@ -14,7 +14,7 @@ export const site = {
   role: "Web Developer & SEO",
   // TODO: replace with your real domain (no trailing slash). Used for SEO, sitemap & Open Graph.
   url: "https://your-domain.com",
-  title: "Surendra Singh — Web Developer (WordPress, Next.js) & SEO",
+  title: "Surendra Singh - Web Developer (WordPress, Next.js) & SEO",
   description:
     "I build fast websites that rank on Google. Custom WordPress & Next.js development, speed optimization, and technical, on-page & local SEO.",
   locale: "en_IN",
@@ -67,7 +67,7 @@ export const about = {
   intro: [
     "I’m Surendra, a web developer who builds with WordPress and Next.js and thinks about SEO from the very first line of code.",
     "Most sites look fine but load slowly and stay invisible on Google. I fix both: clean, fast builds plus the technical and on-page SEO that helps them get found.",
-    "[Add one personal line here — e.g. where you’re based, what you enjoy, or what you’re learning right now.]",
+    "[Add one personal line here - e.g. where you’re based, what you enjoy, or what you’re learning right now.]",
   ],
   stats: [
     { value: "4+", label: "Years of experience" },
@@ -83,7 +83,7 @@ export const about = {
 /* Option A (default): your own video file                             */
 /*   1. Put your video at /public/video/intro.mp4                      */
 /*   2. (Optional) Put a cover image at /public/video/poster.jpg and   */
-/*      change `poster` below. Keep it small (100–200 KB) — it shows   */
+/*      change `poster` below. Keep it small (100-200 KB) - it shows   */
 /*      on the first screen, so a heavy image slows the page down.     */
 /*   3. (Optional) Add subtitles at /public/video/intro.vtt and set    */
 /*      `captions: "/video/intro.vtt"`                                 */
@@ -93,14 +93,14 @@ export const about = {
 /*   When it is set, YouTube is used instead of the file.              */
 /* ------------------------------------------------------------------ */
 export const video = {
-  caption: "Meet me in 2 min",
+  caption: "Meet me in a minute",
   speedNote: "Lighthouse 95+ on every build",
   src: "/video/intro.mp4",
   poster: "/video/poster.svg",
   captions: "", // e.g. "/video/intro.vtt"
-  youtubeId: "", // e.g. "dQw4w9WgXcQ"
-  label: "Intro video — Surendra Singh",
-  duration: "[1:30]",
+  youtubeId: "kp8aojxzvW8", // https://www.youtube.com/watch?v=kp8aojxzvW8
+  label: "Intro video - Surendra Singh",
+  duration: "1:10",
 };
 
 /* ------------------------------------------------------------------ */
@@ -193,22 +193,22 @@ export const experience = {
   title: "Where I’ve been working.",
   items: [
     {
-      period: "[Month Year] — Present",
+      period: "[Month Year] - Present",
       role: "Web Developer",
       company: "[Company]",
       points: [
-        "[What you build/own here — e.g. company websites on WordPress]",
-        "[A responsibility — e.g. speed optimization & technical SEO]",
-        "[An achievement — add a real number if you have one]",
+        "[What you build/own here - e.g. company websites on WordPress]",
+        "[A responsibility - e.g. speed optimization & technical SEO]",
+        "[An achievement - add a real number if you have one]",
       ],
     },
     {
-      period: "[Year] — Present",
+      period: "[Year] - Present",
       role: "Freelance Web Developer & SEO",
       company: "Self-employed",
       points: [
-        "[Type of clients — e.g. local businesses, startups]",
-        "[What you deliver — e.g. WordPress / Next.js sites, local SEO]",
+        "[Type of clients - e.g. local businesses, startups]",
+        "[What you deliver - e.g. WordPress / Next.js sites, local SEO]",
       ],
     },
   ],

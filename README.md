@@ -1,4 +1,4 @@
-# Surendra Singh — Portfolio
+# Surendra Singh - Portfolio
 
 One-page portfolio built with Next.js (App Router) + Tailwind CSS, exported as a **static site** for Hostinger shared hosting.
 

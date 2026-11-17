@@ -7,10 +7,12 @@ type Props = { id: string; title: string };
 
 /**
  * Shows a thumbnail + play button and only loads the (heavy) YouTube player
- * after the visitor clicks — keeps the page fast and Lighthouse happy.
+ * after the visitor clicks - keeps the page fast and Lighthouse happy.
  */
 export default function YouTubeFacade({ id, title }: Props) {
   const [playing, setPlaying] = useState(false);
+  // Sharp 1280x720 thumbnail; falls back to the smaller one if it doesn't exist.
+  const [thumb, setThumb] = useState(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`);
 
   if (playing) {
     return (
@@ -32,7 +34,8 @@ export default function YouTubeFacade({ id, title }: Props) {
       className="group absolute inset-0 size-full"
     >
       <Image
-        src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+        src={thumb}
+        onError={() => setThumb(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)}
         alt=""
         fill
         unoptimized
