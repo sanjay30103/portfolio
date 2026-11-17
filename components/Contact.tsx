@@ -3,9 +3,9 @@ import { CalendarIcon, GitHubIcon, LinkedInIcon, MailIcon } from "./Icons";
 
 export default function Contact() {
   return (
-    <section id="contact" aria-labelledby="contact-title" className="py-20 sm:py-28">
+    <section id="contact" aria-labelledby="contact-title" className="py-12 sm:py-14 lg:py-18">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface px-6 py-14 text-center sm:px-12 sm:py-20">
+        <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface px-6 py-12 text-center sm:px-12 sm:py-16">
           <div
             aria-hidden
             className="pointer-events-none absolute -top-40 left-1/2 h-80 w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
@@ -25,7 +25,7 @@ export default function Contact() {
           </h2>
           <p className="relative mx-auto mt-5 max-w-xl text-base text-muted sm:text-lg">{contact.text}</p>
 
-          <div className="relative mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+          <div className="relative mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <a
               href={`mailto:${links.email}`}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-accent"
@@ -45,7 +45,7 @@ export default function Contact() {
             </a>
           </div>
 
-          <div className="relative mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <div className="relative mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
               href={`mailto:${links.email}`}
               className="font-mono text-sm break-all text-muted underline-offset-4 transition-colors hover:text-fg hover:underline"

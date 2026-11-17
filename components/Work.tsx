@@ -19,11 +19,11 @@ export default function Work() {
   const { labels } = work;
 
   return (
-    <section id="work" aria-labelledby="work-title" className="py-20 sm:py-28">
+    <section id="work" aria-labelledby="work-title" className="py-12 sm:py-14 lg:py-18">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading id="work-title" eyebrow={work.eyebrow} title={work.title} description={work.description} />
 
-        <ul className="mt-12 space-y-5">
+        <ul className="mt-8 space-y-5 sm:mt-10">
           {work.projects.map((p, i) => (
             <li key={p.name}>
               <article className="group grid overflow-hidden rounded-3xl border border-line bg-surface transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-line-strong lg:grid-cols-[1.1fr_1fr]">

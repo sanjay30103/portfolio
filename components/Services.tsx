@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function Services() {
   return (
-    <section id="services" aria-labelledby="services-title" className="py-20 sm:py-28">
+    <section id="services" aria-labelledby="services-title" className="py-12 sm:py-14 lg:py-18">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           id="services-title"
@@ -13,7 +13,7 @@ export default function Services() {
           description={services.description}
         />
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
+        <div className="mt-8 grid gap-4 sm:mt-10 md:grid-cols-2">
           {services.pillars.map((p) => (
             <article
               key={p.name}

@@ -3,11 +3,11 @@ import SectionHeading from "./SectionHeading";
 
 export default function Experience() {
   return (
-    <section id="experience" aria-labelledby="experience-title" className="py-20 sm:py-28">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+    <section id="experience" aria-labelledby="experience-title" className="py-12 sm:py-14 lg:py-18">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
         <SectionHeading id="experience-title" eyebrow={experience.eyebrow} title={experience.title} />
 
-        <ol className="relative space-y-10 border-l border-line pl-7 sm:pl-9">
+        <ol className="relative space-y-8 border-l border-line pl-7 sm:pl-9">
           {experience.items.map((item, i) => (
             <li key={item.role + item.company} className="relative">
               <span

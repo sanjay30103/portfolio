@@ -5,8 +5,8 @@ import VideoPlayer from "./VideoPlayer";
 
 export default function Hero() {
   return (
-    <section id="top" aria-labelledby="hero-title" className="pt-14 pb-20 sm:pt-24 sm:pb-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
+    <section id="top" aria-labelledby="hero-title" className="pt-10 pb-12 sm:pt-16 sm:pb-14 lg:pt-20 lg:pb-18">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
         <div>
           <p className="font-mono text-xs tracking-[0.08em] text-muted sm:text-sm">{hero.eyebrow}</p>
 
@@ -41,7 +41,7 @@ export default function Hero() {
 
           <ul
             aria-label="Core skills"
-            className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs text-muted sm:text-sm"
+            className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs text-muted sm:text-sm"
           >
             {hero.techLine.map((item, i) => (
               <li key={item} className="flex items-center gap-3">
