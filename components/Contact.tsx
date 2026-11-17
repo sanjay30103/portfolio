@@ -1,5 +1,6 @@
 import { contact, links } from "@/data/content";
-import { CalendarIcon, GitHubIcon, LinkedInIcon, MailIcon } from "./Icons";
+import { whatsappUrl } from "@/lib/whatsapp";
+import { CalendarIcon, GitHubIcon, LinkedInIcon, MailIcon, WhatsAppIcon } from "./Icons";
 
 export default function Contact() {
   return (
@@ -27,8 +28,18 @@ export default function Contact() {
 
           <div className="relative mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <a
-              href={`mailto:${links.email}`}
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-accent"
+            >
+              <WhatsAppIcon />
+              {contact.whatsappCta}
+              <span className="sr-only">(opens WhatsApp in a new tab)</span>
+            </a>
+            <a
+              href={`mailto:${links.email}`}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-line-strong px-6 py-3 text-sm font-medium text-fg transition-colors hover:border-fg/40 hover:bg-surface-2"
             >
               <MailIcon />
               {contact.emailCta}

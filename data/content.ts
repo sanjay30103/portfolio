@@ -27,8 +27,11 @@ export const site = {
 /* ------------------------------------------------------------------ */
 export const links = {
   email: "surendrasinghdev383@gmail.com",
+  // WhatsApp: country code + number, digits only (no +, spaces or dashes)
+  whatsapp: "918474939531",
+  whatsappMessage: "Hi Surendra, I saw your portfolio and would like to discuss a website.",
   linkedin: "https://www.linkedin.com/in/[your-handle]",
-  github: "https://github.com/[your-handle]",
+  github: "https://github.com/surendrasinghdev",
   calendly: "https://calendly.com/[your-handle]",
   resume: "/resume/surendra-singh-resume.pdf", // regenerate with: npm run resume
 };
@@ -227,7 +230,8 @@ export const experience = {
 export const contact = {
   eyebrow: "Contact",
   title: "Let’s build something that ranks.",
-  text: "Hiring for a developer role, or need a website that actually brings in customers? Send me an email or book a quick call.",
+  text: "Hiring for a developer role, or need a website that actually brings in customers? Message me on WhatsApp, send an email or book a quick call.",
+  whatsappCta: "WhatsApp me",
   emailCta: "Email me",
   callCta: "Book a call",
 };

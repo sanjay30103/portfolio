@@ -1,10 +1,12 @@
 import { footer, links, site } from "@/data/content";
-import { GitHubIcon, LinkedInIcon, MailIcon } from "./Icons";
+import { whatsappUrl } from "@/lib/whatsapp";
+import { GitHubIcon, LinkedInIcon, MailIcon, WhatsAppIcon } from "./Icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   const socials = [
+    { label: "WhatsApp", href: whatsappUrl(), Icon: WhatsAppIcon, external: true },
     { label: "Email", href: `mailto:${links.email}`, Icon: MailIcon, external: false },
     { label: "LinkedIn", href: links.linkedin, Icon: LinkedInIcon, external: true },
     { label: "GitHub", href: links.github, Icon: GitHubIcon, external: true },
