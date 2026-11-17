@@ -172,9 +172,9 @@ export const work = {
     },
     {
       name: "itDeal SG",
-      image: "/work/itdealsg-b2b-ecommerce-website-woocommerce.webp",
+      image: "/work/itdealsg-flash-deals-ecommerce-woocommerce.webp",
       imageAlt:
-        "itDeal SG electronics store homepage with product search, category menu, a laptop deal banner and phone and audio offers",
+        "itDeal SG electronics store with product search, category menu, today's flash deals with a countdown timer and discounted products, and weekly bestsellers",
       tags: ["WooCommerce", "Custom theme", "Custom plugins", "B2B"],
       problem: "The store had to serve both shoppers and business buyers on one platform, without getting slow.",
       solution: "Built a custom WordPress theme and custom plugins, including smart product search and a custom checkout flow, plus a B2B 'For Business' section.",
