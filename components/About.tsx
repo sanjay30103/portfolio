@@ -16,9 +16,10 @@ export default function About() {
 
           <dl className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {about.stats.map((s) => (
-              <div key={s.label} className="rounded-2xl border border-line bg-surface p-5">
+              <div key={s.label} className="flex flex-col rounded-2xl border border-line bg-surface p-5">
                 <dt className="text-sm text-muted">{s.label}</dt>
-                <dd className="mt-2 text-3xl font-medium tracking-tight text-fg">{s.value}</dd>
+                {/* mt-auto keeps the numbers on one line even when a label wraps */}
+                <dd className="mt-auto pt-2 text-3xl font-medium tracking-tight text-fg">{s.value}</dd>
               </div>
             ))}
           </dl>

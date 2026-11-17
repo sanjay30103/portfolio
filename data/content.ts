@@ -70,7 +70,7 @@ export const about = {
   intro: [
     "I’m Surendra, a web developer who builds with WordPress and Next.js and thinks about SEO from the very first line of code.",
     "Most sites look fine but load slowly and stay invisible on Google. I fix both: clean, fast builds plus the technical and on-page SEO that helps them get found.",
-    "[Add one personal line here - e.g. where you’re based, what you enjoy, or what you’re learning right now.]",
+    "I’m based in Delhi, India. Outside work I enjoy playing games and spending time with my dog, and right now I’m learning agentic AI and video editing with Claude.",
   ],
   stats: [
     { value: "4+", label: "Years of experience" },
