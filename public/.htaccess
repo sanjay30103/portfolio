@@ -19,6 +19,14 @@ ErrorDocument 404 /404.html
   AddType text/vtt .vtt
   AddType image/webp .webp
   AddType font/woff2 .woff2
+  AddType application/pdf .pdf
+</IfModule>
+
+# Show the resume PDF inside the browser instead of forcing a download
+<IfModule mod_headers.c>
+  <FilesMatch "\.pdf$">
+    Header set Content-Disposition "inline"
+  </FilesMatch>
 </IfModule>
 
 # The social share image is generated without a file extension
@@ -41,7 +49,7 @@ ErrorDocument 404 /404.html
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
   # HTML should always be fresh so new deploys show up immediately
-  <FilesMatch "\.(html|txt|xml)$">
+  <FilesMatch "\.(html|txt|xml|pdf)$">
     Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>

@@ -19,7 +19,7 @@ export const site = {
     "I build fast websites that rank on Google. Custom WordPress & Next.js development, speed optimization, and technical, on-page & local SEO.",
   locale: "en_IN",
   // Location shown in schema (optional). Example: "Jaipur, India"
-  location: "[City, Country]",
+  location: "Delhi, India",
 };
 
 /* ------------------------------------------------------------------ */
@@ -30,7 +30,7 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/[your-handle]",
   github: "https://github.com/[your-handle]",
   calendly: "https://calendly.com/[your-handle]",
-  resume: "/resume.pdf", // put your resume at /public/resume.pdf
+  resume: "/resume/surendra-singh-resume.pdf", // regenerate with: npm run resume
 };
 
 /* ------------------------------------------------------------------ */
@@ -141,7 +141,7 @@ export const services = {
 
 /* ------------------------------------------------------------------ */
 /* Work / projects                                                     */
-/* Put real screenshots in /public/work and update `image` below.      */
+/* Screenshots live in /public/work as WebP (1200px wide, ~35 KB).     */
 /* ------------------------------------------------------------------ */
 export const work = {
   eyebrow: "Selected work",
@@ -149,34 +149,37 @@ export const work = {
   description: "A few builds, what was wrong, and what changed after.",
   projects: [
     {
-      name: "[Project Name 1]",
-      image: "/work/project-1.svg",
-      imageAlt: "[Screenshot of Project Name 1 homepage]",
-      tags: ["WordPress", "Speed optimization", "Technical SEO"],
-      problem: "[Problem: e.g. Slow site, high bounce rate, not showing on Google]",
-      solution: "[What I did: e.g. Rebuilt the theme, optimized images, fixed indexing]",
-      result: "[Result: e.g. PageSpeed 95+, traffic up X%]",
-      liveUrl: "https://your-project-1.com", // TODO: put the real live URL here
+      name: "Wishtml",
+      image: "/work/wishtml-marketing-agency-website-nextjs.webp",
+      imageAlt:
+        "Wishtml marketing agency website homepage with the headline 'Customers are searching. Let them find you.' and cards for local SEO, restaurant websites and SEO reports",
+      tags: ["Next.js", "WordPress to Next.js", "Website redesign"],
+      problem: "The old WordPress site was slow, and its design didn't show the quality of the agency's work.",
+      solution: "Redesigned the site and rebuilt it from scratch in Next.js, with clean, lightweight code and SEO-ready pages.",
+      result: "A modern, much faster website that presents the agency's website, SEO and ads services properly.",
+      liveUrl: "https://wishtml.com/",
     },
     {
-      name: "[Project Name 2]",
-      image: "/work/project-2.svg",
-      imageAlt: "[Screenshot of Project Name 2 homepage]",
-      tags: ["Next.js", "Figma to code"],
-      problem: "[Problem: e.g. Outdated design, hard to update content]",
-      solution: "[What I did: e.g. Built a new Next.js site from the Figma design]",
-      result: "[Result: e.g. PageSpeed 95+, launched in X weeks]",
-      liveUrl: "https://your-project-2.com", // TODO: put the real live URL here
+      name: "Vincenzo Capuano",
+      image: "/work/vincenzo-capuano-pizza-restaurant-website-react.webp",
+      imageAlt:
+        "Vincenzo Capuano pizzeria website hero with a video of the 2022 World Pizza Champion, Zomato, Swiggy and Book a Table buttons",
+      tags: ["React", "Wix to React", "SEO"],
+      problem: "The site was built on Wix: slow, and the design didn't match a world pizza champion's brand.",
+      solution: "Designed a new site in React with a video hero, table booking and Zomato/Swiggy ordering, and handled the SEO.",
+      result: "A fast, premium site that fits the brand, with a 100/100 Lighthouse SEO score.",
+      liveUrl: "https://vincenzocapuano.in/",
     },
     {
-      name: "[Project Name 3]",
-      image: "/work/project-3.svg",
-      imageAlt: "[Screenshot of Project Name 3 homepage]",
-      tags: ["Local SEO", "Google Business Profile"],
-      problem: "[Problem: e.g. Local business invisible in Google Maps]",
-      solution: "[What I did: e.g. Optimized GBP, local pages and citations]",
-      result: "[Result: e.g. Top 3 in Maps for main keyword]",
-      liveUrl: "https://your-project-3.com", // TODO: put the real live URL here
+      name: "itDeal SG",
+      image: "/work/itdealsg-b2b-ecommerce-website-woocommerce.webp",
+      imageAlt:
+        "itDeal SG electronics store homepage with product search, category menu, a laptop deal banner and phone and audio offers",
+      tags: ["WooCommerce", "Custom theme", "Custom plugins", "B2B"],
+      problem: "The store had to serve both shoppers and business buyers on one platform, without getting slow.",
+      solution: "Built a custom WordPress theme and custom plugins, including smart product search and a custom checkout flow, plus a B2B 'For Business' section.",
+      result: "One fast platform for retail and B2B orders, with a 100/100 Lighthouse accessibility score.",
+      liveUrl: "https://itdealsg.com/",
     },
   ],
   labels: {
@@ -195,22 +198,24 @@ export const experience = {
   title: "Where I’ve been working.",
   items: [
     {
-      period: "[Month Year] - Present",
+      period: "Present",
       role: "Web Developer",
-      company: "[Company]",
+      company: "Digityza",
+      location: "Toronto, Canada · Remote",
       points: [
-        "[What you build/own here - e.g. company websites on WordPress]",
-        "[A responsibility - e.g. speed optimization & technical SEO]",
-        "[An achievement - add a real number if you have one]",
+        "WordPress, Next.js and Shopify websites for healthcare and service businesses",
+        "Lightweight custom themes and plugins, and Claude AI automation for blogs and repetitive tasks",
+        "Speed, SEO, hosting and deployment. Won the company's Best Website Design Award",
       ],
     },
     {
-      period: "[Year] - Present",
-      role: "Freelance Web Developer & SEO",
-      company: "Self-employed",
+      period: "Sep 2022 - Dec 2025",
+      role: "Web Developer",
+      company: "Webdrop",
+      location: "Calgary, Canada · Remote",
       points: [
-        "[Type of clients - e.g. local businesses, startups]",
-        "[What you deliver - e.g. WordPress / Next.js sites, local SEO]",
+        "WordPress and WooCommerce websites for businesses across many industries",
+        "Custom themes and plugins, Figma to responsive builds, payment integrations",
       ],
     },
   ],

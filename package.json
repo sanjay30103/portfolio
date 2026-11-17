@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "deploy": "bash scripts/deploy.sh",
-    "resume": "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf=resume/Surendra-Singh-Resume.pdf resume/resume.html"
+    "resume": "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf=public/resume/surendra-singh-resume.pdf resume/resume.html"
   },
   "dependencies": {
     "react": "19.1.0",

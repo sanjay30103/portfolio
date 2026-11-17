@@ -20,6 +20,7 @@ export default function Experience() {
               <h3 className="mt-2 text-xl font-medium tracking-tight sm:text-2xl">
                 {item.role} <span className="text-muted">· {item.company}</span>
               </h3>
+              {item.location && <p className="mt-1 text-sm text-muted">{item.location}</p>}
               <ul className="mt-4 space-y-2 text-muted">
                 {item.points.map((pt) => (
                   <li key={pt} className="flex gap-3">

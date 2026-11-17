@@ -22,11 +22,13 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href={withBase(links.resume)}
-              download
+              target="_blank"
+              rel="noopener"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-accent"
             >
               <DownloadIcon />
               {hero.primaryCta}
+              <span className="sr-only">(PDF, opens in a new tab)</span>
             </a>
             <a
               href="#contact"
