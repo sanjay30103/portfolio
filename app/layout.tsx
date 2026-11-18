@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Analytics from "@/components/Analytics";
 import { site } from "@/data/content";
 import "./globals.css";
 
@@ -15,8 +16,13 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+// The site may live in a sub-folder (GitHub Pages: /portfolio). Next.js already adds that
+// sub-folder to image URLs, so metadataBase is just the origin and page URLs are written in full.
+const siteOrigin = new URL(site.url).origin;
+const homeUrl = `${site.url}/`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(siteOrigin),
   title: site.title,
   description: site.description,
   applicationName: site.name,
@@ -32,10 +38,10 @@ export const metadata: Metadata = {
     "Speed Optimization",
     site.name,
   ],
-  alternates: { canonical: "/" },
+  alternates: { canonical: homeUrl },
   openGraph: {
     type: "website",
-    url: "/",
+    url: homeUrl,
     siteName: site.name,
     title: site.title,
     description: site.description,
@@ -69,6 +75,7 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
+        <Analytics id={site.googleTagId} />
       </body>
     </html>
   );

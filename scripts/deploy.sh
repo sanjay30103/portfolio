@@ -14,6 +14,8 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 PAGES_BASE_PATH="/portfolio"   # = /<repo-name> for username.github.io/<repo-name>
+PAGES_SITE_URL="https://surendrasinghdev.github.io/portfolio"
+HOSTINGER_SITE_URL=""          # e.g. "https://surendrasingh.dev" - leave empty until the domain is live
 REPO_URL="$(git remote get-url origin)"
 MESSAGE="${1:-Deploy static site ($(date '+%Y-%m-%d %H:%M'))}"
 
@@ -26,13 +28,13 @@ gitx() {
   fi
 }
 
-# build_and_push <branch> <base-path>
+# build_and_push <branch> <base-path> <site-url>
 build_and_push() {
-  local branch="$1" base="$2"
+  local branch="$1" base="$2" url="$3"
   echo ""
   echo "→ Building for '$branch' (base path: '${base:-/}')..."
   rm -rf out
-  NEXT_PUBLIC_BASE_PATH="$base" npm run build >/dev/null
+  NEXT_PUBLIC_BASE_PATH="$base" NEXT_PUBLIC_SITE_URL="$url" npm run build >/dev/null
 
   local tmp
   tmp="$(mktemp -d)"
@@ -60,8 +62,8 @@ build_and_push() {
   rm -rf "$tmp"
 }
 
-build_and_push "gh-pages" "$PAGES_BASE_PATH"
-build_and_push "main" ""   # built last, so /out stays the Hostinger version
+build_and_push "gh-pages" "$PAGES_BASE_PATH" "$PAGES_SITE_URL"
+build_and_push "main" "" "$HOSTINGER_SITE_URL"   # built last, so /out stays the Hostinger version
 
 echo ""
 echo "Done. Hostinger pulls 'main'; GitHub Pages serves 'gh-pages'."

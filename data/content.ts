@@ -12,8 +12,12 @@ export const site = {
   name: "Surendra Singh",
   initials: "SS",
   role: "Web Developer & SEO",
-  // TODO: replace with your real domain (no trailing slash). Used for SEO, sitemap & Open Graph.
-  url: "https://your-domain.com",
+  // Full site address (no trailing slash). Used for SEO canonical, sitemap & Open Graph.
+  // The deploy script sets the right one per build (GitHub Pages / Hostinger).
+  // TODO: put your Hostinger domain here once it's live.
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://your-domain.com",
+  // Google tag (Google Analytics 4). Leave empty to turn analytics off.
+  googleTagId: "GTM-5D6J6ZTT",
   title: "Surendra Singh - Web Developer (WordPress, Next.js) & SEO",
   description:
     "I build fast websites that rank on Google. Custom WordPress & Next.js development, speed optimization, and technical, on-page & local SEO.",
