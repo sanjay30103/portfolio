@@ -1,5 +1,4 @@
 User-Agent: *
 Allow: /
 
-Host: https://your-domain.com
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://surendrasinghdev.github.io/portfolio/sitemap.xml
